@@ -13,7 +13,7 @@ export function Portfolio() {
   return (
     <section className="py-16 md:py-24 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
-        <BlurFade delay={0.1} className="text-center mb-12">
+        <BlurFade delay={0.2} yOffset={20} className="text-center mb-12">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground">
             Veja Alguns dos Modelos Incríveis
           </h2>
@@ -24,7 +24,8 @@ export function Portfolio() {
       </div>
       
       <BlurFade
-        delay={0.2}
+        delay={0.4}
+        yOffset={20}
         className="relative w-full overflow-hidden"
       >
         <div className="flex animate-marquee-fast hover:[animation-play-state:paused]">

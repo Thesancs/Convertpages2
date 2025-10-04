@@ -18,11 +18,6 @@ interface BlurFadeProps {
   triggerOnce?: boolean;
 }
 
-const BLUR_FADE_VARIANTS = {
-  hidden: { y: 20, opacity: 0, filter: 'blur(5px)' },
-  visible: { y: 0, opacity: 1, filter: 'blur(0px)' },
-};
-
 export function BlurFade({
   children,
   className,
@@ -38,8 +33,8 @@ export function BlurFade({
   const ref = useRef<HTMLDivElement | null>(null);
 
   const variants = variant || {
-    hidden: { y: yOffset, ...BLUR_FADE_VARIANTS.hidden },
-    visible: { y: 0, ...BLUR_FADE_VARIANTS.visible },
+    hidden: { y: yOffset, opacity: 0, filter: 'blur(5px)' },
+    visible: { y: 0, opacity: 1, filter: 'blur(0px)' },
   };
 
   useEffect(() => {
@@ -74,15 +69,18 @@ export function BlurFade({
     };
   }, [inViewProp, inViewMargin, triggerOnce, yOffset]);
 
+  const styles = {
+    transform: inView ? `translateY(${variants.visible.y}px)` : `translateY(${variants.hidden.y}px)`,
+    opacity: inView ? variants.visible.opacity : variants.hidden.opacity,
+    filter: inView ? variants.visible.filter : variants.hidden.filter,
+    transition: `transform ${duration}s ease-out ${delay}s, opacity ${duration}s ease-out ${delay}s, filter ${duration}s ease-out ${delay}s`,
+  };
+
   return (
     <div
       ref={ref}
-      className={cn("transition-all", className)}
-      style={{
-        ...variants.hidden,
-        transition: `all ${duration}s ease-in-out ${delay}s`,
-        ...(inView && variants.visible),
-      }}
+      className={cn(className)}
+      style={styles}
     >
       {children}
     </div>

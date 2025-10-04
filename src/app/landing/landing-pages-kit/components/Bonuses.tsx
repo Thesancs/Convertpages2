@@ -14,7 +14,7 @@ export function Bonuses() {
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <BlurFade delay={0.1} className="text-center mb-12">
+        <BlurFade delay={0.2} yOffset={20} className="text-center mb-12">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground">
             E ainda... Leve 3 Bônus Exclusivos!
           </h2>
@@ -28,7 +28,8 @@ export function Bonuses() {
             return (
               <BlurFade
                 key={index}
-                delay={0.2 + index * 0.1}
+                delay={0.3 + index * 0.15}
+                yOffset={20}
               >
                 <Card
                   className="overflow-hidden h-full shadow-lg transition-transform duration-300 hover:-translate-y-2 bg-gradient-to-br from-primary via-indigo-900 to-black text-primary-foreground"

@@ -15,26 +15,26 @@ export function Hero() {
       </div>
       <div className="container mx-auto px-4 md:px-6 relative z-10 grid md:grid-cols-2 gap-8 items-center">
         <div className="text-center md:text-left">
-            <BlurFade delay={0.1}>
+            <BlurFade delay={0.2} yOffset={10}>
                 <Rocket className="h-12 w-12 text-accent mx-auto md:mx-0" />
             </BlurFade>
-            <BlurFade delay={0.2}>
+            <BlurFade delay={0.3} yOffset={20}>
                 <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter text-primary-foreground leading-tight mt-4">
                     +2.000 Landing Pages Prontas para Vender Todos os Dias
                 </h1>
             </BlurFade>
-            <BlurFade delay={0.3}>
+            <BlurFade delay={0.4} yOffset={20}>
                 <p className="mt-6 max-w-xl mx-auto md:mx-0 text-lg md:text-xl text-primary-foreground/80">
                     Crie páginas de alta conversão em minutos, sem precisar de designers ou programadores. Acelere seus resultados e economize tempo e dinheiro.
                 </p>
             </BlurFade>
-            <BlurFade delay={0.4}>
+            <BlurFade delay={0.5} yOffset={20}>
                 <div className="mt-10">
                 <CtaButton />
                 </div>
             </BlurFade>
         </div>
-        <BlurFade delay={0.5} className="hidden md:block">
+        <BlurFade delay={0.6} yOffset={20} className="hidden md:block">
             {heroImage && (
               <Image 
                 src={heroImage.imageUrl} 

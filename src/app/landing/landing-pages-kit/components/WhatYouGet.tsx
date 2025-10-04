@@ -18,7 +18,7 @@ export function WhatYouGet() {
   return (
     <section className="py-16 md:py-24 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
-        <BlurFade delay={0.1} className="text-center mb-12">
+        <BlurFade delay={0.2} yOffset={20} className="text-center mb-12">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground">
             O que você vai receber?
           </h2>
@@ -27,7 +27,7 @@ export function WhatYouGet() {
           </p>
         </BlurFade>
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <BlurFade delay={0.2} className="space-y-6">
+          <BlurFade delay={0.3} yOffset={20} className="space-y-6">
             <ul className="space-y-4">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start">
@@ -37,7 +37,7 @@ export function WhatYouGet() {
               ))}
             </ul>
           </BlurFade>
-          <BlurFade delay={0.3}>
+          <BlurFade delay={0.4} yOffset={20}>
             {image && (
               <Image
                 src={image.imageUrl}
@@ -50,7 +50,7 @@ export function WhatYouGet() {
             )}
           </BlurFade>
         </div>
-        <BlurFade delay={0.4} className="text-center mt-16">
+        <BlurFade delay={0.5} yOffset={0} className="text-center mt-16">
           <CtaButton />
         </BlurFade>
       </div>

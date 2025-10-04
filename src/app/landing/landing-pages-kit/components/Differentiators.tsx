@@ -12,7 +12,7 @@ export function Differentiators() {
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <BlurFade delay={0.1} className="text-center mb-12">
+        <BlurFade delay={0.2} yOffset={20} className="text-center mb-12">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground">
             Diferenciais que Colocam Você na Frente
           </h2>
@@ -21,7 +21,8 @@ export function Differentiators() {
           {diffs.map((d, i) => (
             <BlurFade
               key={i}
-              delay={0.2 + i * 0.1}
+              delay={0.3 + i * 0.15}
+              yOffset={20}
             >
               <Card
                 className="p-8 h-full text-center shadow-md bg-gradient-to-br from-primary via-indigo-900 to-black text-primary-foreground"

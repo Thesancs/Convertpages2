@@ -16,7 +16,8 @@ export function Benefits() {
           {benefits.map((benefit, index) => (
             <BlurFade
               key={index}
-              delay={index * 0.15}
+              delay={0.2 + index * 0.15}
+              yOffset={20}
             >
               <div
                 className="text-center h-full p-6 bg-gradient-to-br from-primary via-indigo-900 to-black text-primary-foreground rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-1"
