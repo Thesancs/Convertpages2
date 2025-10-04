@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { CheckCircle2 } from 'lucide-react';
 import { CtaButton } from './CtaButton';
-import { AnimateOnScroll } from './AnimateOnScroll';
+import { BlurFade } from './BlurFade';
 
 const features = [
   "+2.000 Modelos de Landing Pages",
@@ -18,16 +18,16 @@ export function WhatYouGet() {
   return (
     <section className="py-16 md:py-24 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
-        <AnimateOnScroll animationClassName="animate-in fade-in slide-in-from-bottom-5 duration-500" className="text-center mb-12">
+        <BlurFade delay={0.1} className="text-center mb-12">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground">
             O que você vai receber?
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
             Um arsenal completo para você construir ofertas irresistíveis e vender todos os dias.
           </p>
-        </AnimateOnScroll>
+        </BlurFade>
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <AnimateOnScroll animationClassName="animate-in fade-in slide-in-from-left-5 duration-700" className="space-y-6">
+          <BlurFade delay={0.2} className="space-y-6">
             <ul className="space-y-4">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start">
@@ -36,8 +36,8 @@ export function WhatYouGet() {
                 </li>
               ))}
             </ul>
-          </AnimateOnScroll>
-          <AnimateOnScroll animationClassName="animate-in fade-in slide-in-from-right-5 duration-700">
+          </BlurFade>
+          <BlurFade delay={0.3}>
             {image && (
               <Image
                 src={image.imageUrl}
@@ -48,11 +48,11 @@ export function WhatYouGet() {
                 data-ai-hint={image.imageHint}
               />
             )}
-          </AnimateOnScroll>
+          </BlurFade>
         </div>
-        <AnimateOnScroll animationClassName="animate-in fade-in duration-500" delay={300} className="text-center mt-16">
+        <BlurFade delay={0.4} className="text-center mt-16">
           <CtaButton />
-        </AnimateOnScroll>
+        </BlurFade>
       </div>
     </section>
   );

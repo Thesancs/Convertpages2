@@ -1,6 +1,6 @@
 import { Card } from '@/components/ui/card';
 import { Target, Edit3, Smartphone } from 'lucide-react';
-import { AnimateOnScroll } from './AnimateOnScroll';
+import { BlurFade } from './BlurFade';
 
 const diffs = [
   { icon: Target, title: 'Foco em Conversão', description: 'Cada elemento é pensado para maximizar seus resultados financeiros.' },
@@ -12,17 +12,16 @@ export function Differentiators() {
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <AnimateOnScroll animationClassName="animate-in fade-in slide-in-from-bottom-5 duration-500" className="text-center mb-12">
+        <BlurFade delay={0.1} className="text-center mb-12">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground">
             Diferenciais que Colocam Você na Frente
           </h2>
-        </AnimateOnScroll>
+        </BlurFade>
         <div className="grid md:grid-cols-3 gap-8">
           {diffs.map((d, i) => (
-            <AnimateOnScroll
+            <BlurFade
               key={i}
-              animationClassName="animate-in fade-in zoom-in-95"
-              delay={150 + i * 150}
+              delay={0.2 + i * 0.1}
             >
               <Card
                 className="p-8 h-full text-center shadow-md bg-gradient-to-br from-primary via-indigo-900 to-black text-primary-foreground"
@@ -35,7 +34,7 @@ export function Differentiators() {
                   <h3 className="text-xl font-headline font-semibold text-primary-foreground">{d.title}</h3>
                   <p className="mt-2 text-primary-foreground/80">{d.description}</p>
               </Card>
-            </AnimateOnScroll>
+            </BlurFade>
           ))}
         </div>
       </div>

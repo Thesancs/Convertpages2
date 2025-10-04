@@ -1,6 +1,6 @@
 import { Rocket } from 'lucide-react';
 import { CtaButton } from './CtaButton';
-import { AnimateOnScroll } from './AnimateOnScroll';
+import { BlurFade } from './BlurFade';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
@@ -15,26 +15,26 @@ export function Hero() {
       </div>
       <div className="container mx-auto px-4 md:px-6 relative z-10 grid md:grid-cols-2 gap-8 items-center">
         <div className="text-center md:text-left">
-            <AnimateOnScroll animationClassName="animate-in fade-in slide-in-from-top-4 duration-1000">
+            <BlurFade delay={0.1}>
                 <Rocket className="h-12 w-12 text-accent mx-auto md:mx-0" />
-            </AnimateOnScroll>
-            <AnimateOnScroll animationClassName="animate-in fade-in slide-in-from-top-5 duration-1000" delay={150}>
+            </BlurFade>
+            <BlurFade delay={0.2}>
                 <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter text-primary-foreground leading-tight mt-4">
                     +2.000 Landing Pages Prontas para Vender Todos os Dias
                 </h1>
-            </AnimateOnScroll>
-            <AnimateOnScroll animationClassName="animate-in fade-in slide-in-from-top-6 duration-1000" delay={300}>
+            </BlurFade>
+            <BlurFade delay={0.3}>
                 <p className="mt-6 max-w-xl mx-auto md:mx-0 text-lg md:text-xl text-primary-foreground/80">
                     Crie páginas de alta conversão em minutos, sem precisar de designers ou programadores. Acelere seus resultados e economize tempo e dinheiro.
                 </p>
-            </AnimateOnScroll>
-            <AnimateOnScroll animationClassName="animate-in fade-in slide-in-from-top-8 duration-1000" delay={450}>
+            </BlurFade>
+            <BlurFade delay={0.4}>
                 <div className="mt-10">
                 <CtaButton />
                 </div>
-            </AnimateOnScroll>
+            </BlurFade>
         </div>
-        <AnimateOnScroll animationClassName="animate-in fade-in zoom-in-95 duration-1000" delay={600} className="hidden md:block">
+        <BlurFade delay={0.5} className="hidden md:block">
             {heroImage && (
               <Image 
                 src={heroImage.imageUrl} 
@@ -45,7 +45,7 @@ export function Hero() {
                 data-ai-hint={heroImage.imageHint}
               />
             )}
-        </AnimateOnScroll>
+        </BlurFade>
       </div>
     </section>
   );

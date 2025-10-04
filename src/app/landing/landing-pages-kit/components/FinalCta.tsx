@@ -1,13 +1,13 @@
 import { Card } from '@/components/ui/card';
 import { CtaButton } from './CtaButton';
 import { CheckCircle, ShieldCheck } from 'lucide-react';
-import { AnimateOnScroll } from './AnimateOnScroll';
+import { BlurFade } from './BlurFade';
 
 export function FinalCta() {
     return (
         <section className="py-16 md:py-24 bg-secondary/50">
             <div className="container mx-auto px-4 md:px-6">
-                <AnimateOnScroll animationClassName="animate-in fade-in zoom-in-95 duration-700">
+                <BlurFade delay={0.2}>
                     <Card className="max-w-4xl mx-auto p-8 md:p-12 shadow-2xl bg-gradient-to-br from-primary via-indigo-900 to-black text-primary-foreground overflow-hidden">
                         <div className="relative z-10 text-center">
                             <h2 className="font-headline text-3xl md:text-5xl font-bold">
@@ -33,7 +33,7 @@ export function FinalCta() {
                             </div>
                         </div>
                     </Card>
-                </AnimateOnScroll>
+                </BlurFade>
             </div>
         </section>
     );
