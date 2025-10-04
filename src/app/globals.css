@@ -85,6 +85,14 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+
+  .embla__container {
+    perspective: 1000px;
+  }
+
+  .embla__slide {
+    transform-style: preserve-3d;
+  }
 }
 
 @layer components {
