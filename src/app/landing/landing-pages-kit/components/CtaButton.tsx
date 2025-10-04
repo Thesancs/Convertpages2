@@ -40,7 +40,7 @@ export function CtaButton({ className, children }: { className?: string, childre
       size="lg"
       className={cn(
         'bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-base shadow-lg transition-all duration-300 transform hover:scale-105',
-        'animate-glow-pulse btn-shine',
+        'btn-shine',
         className
       )}
       onClick={handleClick}
