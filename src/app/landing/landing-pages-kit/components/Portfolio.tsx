@@ -11,7 +11,7 @@ const portfolioImages = PlaceHolderImages.filter(p => p.id.startsWith('portfolio
 
 export function Portfolio() {
   return (
-    <section className="py-16 md:py-24 bg-secondary/50">
+    <section className="py-16 md:py-24 bg-secondary/50 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <BlurFade delay={0.2} yOffset={20} className="text-center mb-12">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground">
@@ -26,7 +26,7 @@ export function Portfolio() {
       <BlurFade
         delay={0.4}
         yOffset={20}
-        className="relative w-full overflow-hidden"
+        className="relative w-full"
       >
         <div className="flex animate-marquee-fast hover:[animation-play-state:paused]">
             {[...portfolioImages, ...portfolioImages].map((image, index) => (
