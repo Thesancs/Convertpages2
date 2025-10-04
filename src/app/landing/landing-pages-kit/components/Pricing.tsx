@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Check, Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
+import { CtaButton } from './CtaButton';
 
 const premiumFeatures = [
     { text: "Acesso Completo as Páginas de Vendas", price: "97" },
@@ -31,11 +32,11 @@ const premiumFeatures = [
 
 export function Pricing() {
     return (
-        <section className="py-16 md:py-24 bg-secondary/50">
+        <section className="py-16 md:py-24 bg-secondary/50 overflow-hidden">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="grid lg:grid-cols-2 gap-8 items-start">
+                <div className="grid lg:grid-cols-2 gap-8 items-stretch">
                     {/* Plano Básico */}
-                    <Card className="bg-gradient-to-br from-primary via-indigo-900 to-black text-primary-foreground p-6 rounded-2xl h-full flex flex-col justify-between">
+                    <Card className="bg-gradient-to-br from-primary via-indigo-900 to-black text-primary-foreground p-6 rounded-2xl h-full flex flex-col justify-between w-full">
                         <div>
                             <CardHeader>
                                 <CardTitle className="font-headline text-3xl">Plano Básico</CardTitle>
@@ -56,7 +57,7 @@ export function Pricing() {
                             </CardContent>
                         </div>
                         <div className="px-6 pb-6">
-                            <Button className="w-full btn-new-cta font-bold">QUERO O PLANO BÁSICO!</Button>
+                            <CtaButton className="w-full">QUERO O PLANO BÁSICO!</CtaButton>
                             <p className="text-center mt-4 text-sm text-muted-foreground">
                                 Mas antes de comprar… temos uma oferta MAIS vantajosa para você! Veja abaixo...
                             </p>
@@ -64,7 +65,7 @@ export function Pricing() {
                     </Card>
 
                     {/* Oferta Premium */}
-                    <div className="relative">
+                    <div className="relative w-full">
                         <Badge className="absolute -top-4 left-1/2 -translate-x-1/2 z-10 bg-white text-black font-bold border-2 border-accent shadow-lg px-4 py-1 text-sm">
                             MAIS VENDIDO
                         </Badge>
@@ -98,7 +99,7 @@ export function Pricing() {
                                 </CardContent>
                             </div>
                             <div className="px-6 pb-6">
-                                 <Button className="w-full btn-new-cta font-bold text-lg" size="lg">QUERO A OFERTA PREMIUM!</Button>
+                                 <CtaButton className="w-full text-lg">QUERO A OFERTA PREMIUM!</CtaButton>
                             </div>
                         </Card>
                     </div>
