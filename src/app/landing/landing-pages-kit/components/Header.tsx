@@ -23,9 +23,9 @@ export function Header() {
         scrolled ? 'bg-background/80 backdrop-blur-lg border-b border-border/20 shadow-sm' : 'bg-transparent'
       )}
     >
-      <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
+      <div className="container mx-auto flex h-24 items-center justify-between px-4 md:px-6">
         <Link href="/landing/landing-pages-kit" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="LandingPro Kit Logo" width={196} height={56} className="h-14 w-auto" />
+          <Image src="/logo.png" alt="LandingPro Kit Logo" width={240} height={68} className="h-16 w-auto" />
         </Link>
         <div className="hidden md:block">
           <CtaButton />
