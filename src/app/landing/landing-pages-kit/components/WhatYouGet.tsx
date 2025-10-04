@@ -17,7 +17,7 @@ export function WhatYouGet() {
   return (
     <section className="py-16 md:py-24 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-in fade-in slide-in-from-bottom-5 duration-500">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground">
             O que você vai receber?
           </h2>
@@ -26,7 +26,7 @@ export function WhatYouGet() {
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+          <div className="space-y-6 animate-in fade-in slide-in-from-left-5 duration-700">
             <ul className="space-y-4">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start">
@@ -36,7 +36,7 @@ export function WhatYouGet() {
               ))}
             </ul>
           </div>
-          <div>
+          <div className="animate-in fade-in slide-in-from-right-5 duration-700">
             {image && (
               <Image
                 src={image.imageUrl}
@@ -49,7 +49,7 @@ export function WhatYouGet() {
             )}
           </div>
         </div>
-        <div className="text-center mt-16">
+        <div className="text-center mt-16 animate-in fade-in duration-500 delay-300">
           <CtaButton />
         </div>
       </div>

@@ -6,7 +6,7 @@ export function FinalCta() {
     return (
         <section className="py-16 md:py-24 bg-secondary/50">
             <div className="container mx-auto px-4 md:px-6">
-                <Card className="max-w-4xl mx-auto p-8 md:p-12 shadow-2xl bg-gradient-to-br from-primary via-indigo-900 to-black text-primary-foreground overflow-hidden">
+                <Card className="max-w-4xl mx-auto p-8 md:p-12 shadow-2xl bg-gradient-to-br from-primary via-indigo-900 to-black text-primary-foreground overflow-hidden animate-in fade-in zoom-in-95 duration-700">
                     <div className="relative z-10 text-center">
                         <h2 className="font-headline text-3xl md:text-5xl font-bold">
                             Garanta seu Acesso Imediato ao Kit Completo

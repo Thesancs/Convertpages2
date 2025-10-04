@@ -11,14 +11,18 @@ export function Differentiators() {
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-in fade-in slide-in-from-bottom-5 duration-500">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground">
             Diferenciais que Colocam Você na Frente
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {diffs.map((d, i) => (
-            <Card key={i} className="p-8 text-center bg-card/50 backdrop-blur-sm border-border/50 shadow-md">
+            <Card
+              key={i}
+              className="p-8 text-center bg-card/50 backdrop-blur-sm border-border/50 shadow-md animate-in fade-in zoom-in-95"
+              style={{ animationDelay: `${150 + i * 150}ms`, animationFillMode: 'backwards' }}
+            >
                 <div className="flex justify-center mb-4">
                     <div className="bg-primary/10 p-4 rounded-full">
                         <d.icon className="h-8 w-8 text-primary" />
