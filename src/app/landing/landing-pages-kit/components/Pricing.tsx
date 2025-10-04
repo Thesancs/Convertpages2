@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
 
 const premiumFeatures = [
     { text: "Acesso Completo as Páginas de Vendas", price: "97" },
@@ -63,34 +64,39 @@ export function Pricing() {
                     </Card>
 
                     {/* Oferta Premium */}
-                    <Card className="bg-gradient-to-br from-accent/80 via-purple-700 to-indigo-900 text-primary-foreground p-6 rounded-2xl border-2 border-accent shadow-accent/20 shadow-2xl h-full flex flex-col justify-between">
-                        <div>
-                            <CardHeader>
-                                <CardTitle className="font-headline text-3xl">Oferta Premium</CardTitle>
-                            </CardHeader>
-                            <CardContent className="space-y-4">
-                                <ul className="space-y-2 text-sm">
-                                    {premiumFeatures.map((feature, index) => (
-                                        <li key={index} className="flex items-center justify-between gap-2">
-                                            <span className="flex items-center gap-2">
-                                                <Check className="h-4 w-4 text-green-300" /> {feature.text}
-                                            </span>
-                                            <span className="line-through text-red-400/90">R${feature.price}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                                <div className="text-center my-6">
-                                    <p className="line-through text-muted-foreground">de R$1007,00</p>
-                                    <p className="text-lg">por apenas 5x de</p>
-                                    <p className="text-5xl font-bold text-white">R$5,82</p>
-                                    <p className="text-lg font-medium">(ou R$25,90 à vista!)</p>
-                                </div>
-                            </CardContent>
-                        </div>
-                        <div className="px-6 pb-6">
-                             <Button className="w-full btn-new-cta font-bold text-lg" size="lg">QUERO A OFERTA PREMIUM!</Button>
-                        </div>
-                    </Card>
+                    <div className="relative">
+                        <Badge className="absolute -top-4 left-1/2 -translate-x-1/2 z-10 bg-white text-black font-bold border-2 border-accent shadow-lg px-4 py-1 text-sm">
+                            MAIS VENDIDO
+                        </Badge>
+                        <Card className="bg-gradient-to-br from-accent/80 via-purple-700 to-indigo-900 text-primary-foreground p-6 rounded-2xl border-2 border-accent shadow-accent/20 shadow-2xl h-full flex flex-col justify-between">
+                            <div>
+                                <CardHeader>
+                                    <CardTitle className="font-headline text-3xl">Oferta Premium</CardTitle>
+                                </CardHeader>
+                                <CardContent className="space-y-4">
+                                    <ul className="space-y-2 text-sm">
+                                        {premiumFeatures.map((feature, index) => (
+                                            <li key={index} className="flex items-center justify-between gap-2">
+                                                <span className="flex items-center gap-2">
+                                                    <Check className="h-4 w-4 text-green-300" /> {feature.text}
+                                                </span>
+                                                <span className="line-through text-red-400/90">R${feature.price}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <div className="text-center my-6">
+                                        <p className="line-through text-muted-foreground">de R$1007,00</p>
+                                        <p className="text-lg">por apenas 5x de</p>
+                                        <p className="text-5xl font-bold text-white">R$5,82</p>
+                                        <p className="text-lg font-medium">(ou R$25,90 à vista!)</p>
+                                    </div>
+                                </CardContent>
+                            </div>
+                            <div className="px-6 pb-6">
+                                 <Button className="w-full btn-new-cta font-bold text-lg" size="lg">QUERO A OFERTA PREMIUM!</Button>
+                            </div>
+                        </Card>
+                    </div>
                 </div>
             </div>
         </section>
