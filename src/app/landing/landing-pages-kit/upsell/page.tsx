@@ -40,7 +40,7 @@ export default function UpsellPage() {
         <Image src="/pack-2-2.webp" alt="LandingPro Kit Pack" width={500} height={500} className="mx-auto" />
         
         <div className="text-center my-8">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-pink-500">
+          <h2 className="font-headline text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-pink-500 uppercase">
             Espere! Desconto <span className="text-white [text-shadow:0_0_8px_rgba(255,255,255,0.7)]">ESPECIAL</span> NA OFERTA PREMIUM!
           </h2>
         </div>
