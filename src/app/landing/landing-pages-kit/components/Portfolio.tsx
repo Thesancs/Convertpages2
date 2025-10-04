@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import {
@@ -12,14 +12,18 @@ import {
   type CarouselApi,
 } from '@/components/ui/carousel';
 import { AnimateOnScroll } from './AnimateOnScroll';
-import { cn } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
+import Autoplay from "embla-carousel-autoplay";
 
 const portfolioImages = PlaceHolderImages.filter(p => p.id.startsWith('portfolio-'));
 
 export function Portfolio() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+
+  const plugin = useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
 
   const updateCurrent = useCallback(() => {
     if (!api) return;
@@ -56,11 +60,14 @@ export function Portfolio() {
         >
           <Carousel
             setApi={setApi}
+            plugins={[plugin.current]}
             opts={{
               align: 'center',
               loop: true,
             }}
             className="w-full max-w-4xl mx-auto"
+            onMouseEnter={plugin.current.stop}
+            onMouseLeave={plugin.current.reset}
           >
             <CarouselContent className="-ml-4">
               {portfolioImages.map((image, index) => (
