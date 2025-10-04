@@ -17,7 +17,7 @@ export default function DownsellPage() {
   return (
     <div className="bg-background text-foreground min-h-screen flex flex-col items-center">
       <div className="w-full bg-gradient-to-r from-accent to-pink-500 text-white text-center py-2 font-bold uppercase tracking-wider [text-shadow:0_0_5px_rgba(255,255,255,0.7)]">
-        Ops... As vagas para a OFERTA BÁSICA ACABARAM!
+        Ops... As vagas para a <span>OFERTA BÁSICA</span> ACABARAM!
       </div>
       
       <div className="p-4 md:p-8 flex flex-col items-center w-full max-w-4xl">
@@ -49,7 +49,7 @@ export default function DownsellPage() {
           </CardContent>
         </Card>
 
-        <div className="text-center bg-card/50 border border-border rounded-xl p-6 md:p-8 max-w-2xl w-full">
+        <div className="text-center bg-gradient-to-br from-primary via-indigo-900 to-black text-primary-foreground rounded-xl p-6 md:p-8 max-w-2xl w-full border-border/50 shadow-lg">
           <p className="text-lg font-semibold text-muted-foreground">Oferta Premium com preço exclusivo somente nessa página por apenas:</p>
           <p className="text-lg text-muted-foreground mt-4">de <span className="line-through">R$197</span> por apenas</p>
           <p className="text-7xl font-bold my-2 text-green-500 drop-shadow-lg [filter:drop-shadow(0_0_10px_rgba(34,197,94,0.6))]">
