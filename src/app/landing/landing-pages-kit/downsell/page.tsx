@@ -17,7 +17,7 @@ export default function DownsellPage() {
   return (
     <div className="bg-background text-foreground min-h-screen flex flex-col items-center">
       <div className="w-full bg-gradient-to-r from-accent to-pink-500 text-white text-center py-2 font-bold uppercase tracking-wider">
-        Ops... As vagas para a <span className="underline">OFERTA BÁSICA</span> ACABARAM!
+        Ops... As vagas para a OFERTA BÁSICA ACABARAM!
       </div>
       
       <div className="p-4 md:p-8 flex flex-col items-center w-full max-w-4xl">
