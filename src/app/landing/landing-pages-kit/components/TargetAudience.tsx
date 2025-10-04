@@ -17,7 +17,7 @@ export function TargetAudience() {
               <Users className="h-8 w-8" />
             </div>
             <h2 className="font-headline text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-pink-500">
-              Para Quem é o LandingPro Kit?
+              Para quem é o Convert Pages Kig 2k?
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
               Se você quer vender mais pela internet, de forma mais rápida e profissional, este kit é para você.
