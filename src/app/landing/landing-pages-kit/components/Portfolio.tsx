@@ -22,7 +22,7 @@ export function Portfolio() {
   const [current, setCurrent] = useState(0);
 
   const plugin = useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: false })
   );
 
   const updateCurrent = useCallback(() => {
@@ -62,12 +62,10 @@ export function Portfolio() {
             setApi={setApi}
             plugins={[plugin.current]}
             opts={{
-              align: 'center',
+              align: 'start',
               loop: true,
             }}
             className="w-full max-w-4xl mx-auto"
-            onMouseEnter={plugin.current.stop}
-            onMouseLeave={plugin.current.reset}
           >
             <CarouselContent className="-ml-4">
               {portfolioImages.map((image, index) => (
