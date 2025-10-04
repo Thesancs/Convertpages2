@@ -52,7 +52,7 @@ export function Pricing() {
                                 </ul>
                                 <div className="text-center my-6">
                                     <p className="line-through text-muted-foreground">de R$97</p>
-                                    <p className="text-4xl font-bold text-accent">por apenas R$5,90</p>
+                                    <p className="text-5xl font-bold text-accent drop-shadow-lg [filter:drop-shadow(0_0_5px_hsl(var(--accent)/0.5))] transition-all duration-300">por apenas R$5,90</p>
                                 </div>
                             </CardContent>
                         </div>
