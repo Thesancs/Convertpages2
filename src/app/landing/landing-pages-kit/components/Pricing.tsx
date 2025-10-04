@@ -34,7 +34,7 @@ export function Pricing() {
     return (
         <section className="py-16 md:py-24 bg-secondary/50 overflow-hidden">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
                     {/* Plano Básico */}
                     <Card className="bg-gradient-to-br from-primary via-indigo-900 to-black text-primary-foreground p-6 rounded-2xl h-full flex flex-col justify-between w-full">
                         <div>
