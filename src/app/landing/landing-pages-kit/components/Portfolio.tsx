@@ -33,16 +33,18 @@ export function Portfolio() {
     };
 
     const applyStyles = () => {
-        const { slides, anEngine } = api.internalEngine();
+        const engine = api.internalEngine();
+        if (!engine.slides) return;
+
         const scrollProgress = api.scrollProgress();
 
-        const newScales = slides.map((_, index) => {
+        const newScales = engine.slides.map((_, index) => {
             const diff = Math.abs(index - scrollProgress);
             const scale = 1 - diff * scaleFactor;
             return Math.max(0, scale);
         });
 
-        const newRotations = slides.map((_, index) => {
+        const newRotations = engine.slides.map((_, index) => {
             const diff = index - scrollProgress;
             return diff * rotationFactor;
         });
