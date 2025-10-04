@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Check } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Footer } from '../components/Footer';
 
 const premiumFeatures = [
     { text: "Acesso Completo as Páginas de Vendas", price: "97" },
@@ -79,6 +80,7 @@ export default function UpsellPage() {
           </Link>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

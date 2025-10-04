@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Check } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Footer } from '../components/Footer';
 
 const downsellFeatures = [
     { text: "+90 Landing Pages Premium", price: "67" },
@@ -20,7 +21,7 @@ export default function DownsellPage() {
         Ops... As vagas para a <span className="">OFERTA BÁSICA</span> ACABARAM!
       </div>
       
-      <div className="p-4 md:p-8 flex flex-col items-center w-full max-w-4xl">
+      <div className="p-4 md:p-8 flex flex-col items-center w-full max-w-4xl flex-grow">
         
         <div className="text-center my-8">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-pink-500 uppercase">
@@ -63,6 +64,7 @@ export default function DownsellPage() {
           </Link>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
