@@ -31,7 +31,7 @@ export function Portfolio() {
         delay={200}
         className="relative w-full overflow-hidden"
       >
-        <div className="flex animate-marquee-slow hover:[animation-play-state:paused]">
+        <div className="flex animate-marquee hover:[animation-play-state:paused]">
             {[...portfolioImages, ...portfolioImages].map((image, index) => (
               <div key={index} className="flex-shrink-0 w-80 px-4">
                   <Card className="overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-1">

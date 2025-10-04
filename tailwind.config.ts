@@ -103,7 +103,7 @@ export default {
         'shine': {
           '100%': { 'transform': 'translateX(100%) skewX(-25deg)' },
         },
-        'marquee-slow': {
+        'marquee': {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-50%)' },
         },
@@ -115,7 +115,7 @@ export default {
         'wave': 'wave 20s linear infinite',
         'wave-delay': 'wave 30s linear infinite',
         'shine': 'shine 1s forwards',
-        'marquee-slow': 'marquee-slow 30s linear infinite',
+        'marquee': 'marquee 15s linear infinite',
       },
     },
   },
