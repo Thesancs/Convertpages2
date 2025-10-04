@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { CheckCircle2 } from 'lucide-react';
 import { CtaButton } from './CtaButton';
+import { AnimateOnScroll } from './AnimateOnScroll';
 
 const features = [
   "+2.000 Modelos de Landing Pages",
@@ -17,16 +18,16 @@ export function WhatYouGet() {
   return (
     <section className="py-16 md:py-24 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12 animate-in fade-in slide-in-from-bottom-5 duration-500">
+        <AnimateOnScroll animationClassName="animate-in fade-in slide-in-from-bottom-5 duration-500" className="text-center mb-12">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground">
             O que você vai receber?
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
             Um arsenal completo para você construir ofertas irresistíveis e vender todos os dias.
           </p>
-        </div>
+        </AnimateOnScroll>
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 animate-in fade-in slide-in-from-left-5 duration-700">
+          <AnimateOnScroll animationClassName="animate-in fade-in slide-in-from-left-5 duration-700" className="space-y-6">
             <ul className="space-y-4">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start">
@@ -35,8 +36,8 @@ export function WhatYouGet() {
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="animate-in fade-in slide-in-from-right-5 duration-700">
+          </AnimateOnScroll>
+          <AnimateOnScroll animationClassName="animate-in fade-in slide-in-from-right-5 duration-700">
             {image && (
               <Image
                 src={image.imageUrl}
@@ -47,11 +48,11 @@ export function WhatYouGet() {
                 data-ai-hint={image.imageHint}
               />
             )}
-          </div>
+          </AnimateOnScroll>
         </div>
-        <div className="text-center mt-16 animate-in fade-in duration-500 delay-300">
+        <AnimateOnScroll animationClassName="animate-in fade-in duration-500" delay={300} className="text-center mt-16">
           <CtaButton />
-        </div>
+        </AnimateOnScroll>
       </div>
     </section>
   );
