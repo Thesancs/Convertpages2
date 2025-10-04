@@ -80,13 +80,14 @@ export function Pricing() {
                                     </div>
                                 </CardHeader>
                                 <CardContent className="space-y-4">
-                                    <ul className="space-y-2 text-sm">
+                                    <ul className="space-y-3 text-sm">
                                         {premiumFeatures.map((feature, index) => (
-                                            <li key={index} className="flex items-center justify-between gap-2">
+                                            <li key={index} className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2">
                                                 <span className="flex items-center gap-2">
-                                                    <Check className="h-4 w-4 text-green-300" /> {feature.text}
+                                                    <Check className="h-4 w-4 text-green-300 flex-shrink-0" /> 
+                                                    <span>{feature.text}</span>
                                                 </span>
-                                                <span className="line-through text-red-400/90">R${feature.price}</span>
+                                                <span className="line-through text-red-400/90 pl-6 sm:pl-0">R${feature.price}</span>
                                             </li>
                                         ))}
                                     </ul>
