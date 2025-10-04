@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'wave-pattern': "url('data:image/svg+xml,%3csvg xmlns=\\'http://www.w3.org/2000/svg\\' viewBox=\\'0 0 1440 320\\'%3e%3cpath fill=\\'hsl(var(--accent))\\' fill-opacity=\\'0.1\\' d=\\'M0,160L48,181.3C96,203,192,245,288,256C384,267,480,245,576,208C672,171,768,117,864,112C960,107,1056,149,1152,160C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z\\'%3e%3c/path%3e%3c/svg%3e')",
+      },
       fontFamily: {
         body: ['Inter', 'sans-serif'],
         headline: ['Poppins', 'sans-serif'],
@@ -92,12 +95,18 @@ export default {
           '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
           '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
           '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+        },
+        'wave': {
+          '0%': { 'background-position-x': '0' },
+          '100%': { 'background-position-x': '-1440px' },
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'blob': 'blob 7s infinite ease-in-out',
+        'wave': 'wave 20s linear infinite',
+        'wave-delay': 'wave 30s linear infinite',
       },
     },
   },

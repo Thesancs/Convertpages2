@@ -9,7 +9,6 @@ import { FinalCta } from './components/FinalCta';
 import { Faq } from './components/Faq';
 import { Footer } from './components/Footer';
 import { FloatingCta } from './components/FloatingCta';
-import { AnimateOnScroll } from './components/AnimateOnScroll';
 
 export default function LandingPagesKitPage() {
   console.log('[LandingPagesKit]', 'Page rendered');
