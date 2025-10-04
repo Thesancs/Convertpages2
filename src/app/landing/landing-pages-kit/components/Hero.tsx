@@ -1,8 +1,6 @@
-import { Rocket } from 'lucide-react';
 import { CtaButton } from './CtaButton';
 import { BlurFade } from './BlurFade';
 import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Hero() {
 
@@ -15,7 +13,7 @@ export function Hero() {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center">
             <BlurFade delay={0.2} yOffset={10}>
-                <Rocket className="h-12 w-12 text-accent mx-auto" />
+                <Image src="/pack-2-2.webp" alt="LandingPro Kit Pack" width={128} height={128} className="mx-auto" />
             </BlurFade>
             <BlurFade delay={0.3} yOffset={20}>
                 <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tighter text-primary-foreground leading-tight mt-4 max-w-4xl mx-auto">
