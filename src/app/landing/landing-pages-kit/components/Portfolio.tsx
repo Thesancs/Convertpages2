@@ -34,7 +34,7 @@ export function Portfolio() {
 
     const applyStyles = () => {
         const engine = api.internalEngine();
-        if (!engine.slides) return;
+        if (!engine || !engine.slides) return;
 
         const scrollProgress = api.scrollProgress();
 
