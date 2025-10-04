@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-mockup",
+      "description": "Mockup of several landing pages on a laptop screen.",
+      "imageUrl": "https://images.unsplash.com/photo-1623667322051-18662ce6334c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsYW5kaW5nJTIwcGFnZXMlMjBtb2NrdXB8ZW58MHx8fHwxNzU5NTkzOTA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "landing pages mockup"
+    },
+    {
+      "id": "what-you-get",
+      "description": "A collage showing different styles of landing pages included in the kit.",
+      "imageUrl": "https://images.unsplash.com/photo-1702575040020-dd098a39d08c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3ZWJzaXRlJTIwY29sbGFnZXxlbnwwfHx8fDE3NTk1OTM5MDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "website collage"
+    },
+    {
+      "id": "bonus-creatives",
+      "description": "Image showing examples of ad creatives.",
+      "imageUrl": "https://images.unsplash.com/photo-1579869847514-7c1a19d2d2ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c29jaWFsJTIwbWVkaWElMjBhZHN8ZW58MHx8fHwxNzU5NTkzOTA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "social media ads"
+    },
+    {
+      "id": "bonus-copywriting",
+      "description": "Image of a book cover for a copywriting guide.",
+      "imageUrl": "https://images.unsplash.com/photo-1535398089889-dd807df1dfaa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxib29rJTIwY292ZXJ8ZW58MHx8fHwxNzU5NTE3MDAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "book cover"
+    },
+    {
+      "id": "bonus-community",
+      "description": "Image representing an online community, with avatars and chat bubbles.",
+      "imageUrl": "https://images.unsplash.com/photo-1591197172062-c718f82aba20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxvbmxpbmUlMjBjb21tdW5pdHl8ZW58MHx8fHwxNzU5NTkzOTA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "online community"
+    }
+  ]
 }
