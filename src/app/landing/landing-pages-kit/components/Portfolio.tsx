@@ -37,40 +37,44 @@ export function Portfolio() {
       <BlurFade
         delay={0.4}
         yOffset={20}
-        className="relative w-full"
+        className="w-full"
       >
-        <Dialog>
-            <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
-                {[...localPortfolioImages, ...localPortfolioImages].map((image, index) => (
-                <div key={index} className="flex-shrink-0 w-64 md:w-80">
-                    <DialogTrigger asChild onClick={() => setSelectedImage(image.imageUrl)}>
-                        <Card className="overflow-hidden shadow-lg cursor-pointer">
-                            <CardContent className="flex aspect-[3/4] items-center justify-center p-0">
-                                <Image
-                                src={image.imageUrl}
-                                alt={image.description}
-                                width={600}
-                                height={800}
-                                className="w-full h-full object-cover"
-                                />
-                            </CardContent>
-                        </Card>
-                    </DialogTrigger>
+        <div className="relative">
+             <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-secondary/50 to-transparent z-10"></div>
+             <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-secondary/50 to-transparent z-10"></div>
+            <Dialog>
+                <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
+                    {[...localPortfolioImages, ...localPortfolioImages].map((image, index) => (
+                    <div key={index} className="flex-shrink-0 w-64 md:w-80 mx-4">
+                        <DialogTrigger asChild onClick={() => setSelectedImage(image.imageUrl)}>
+                            <Card className="overflow-hidden shadow-lg cursor-pointer">
+                                <CardContent className="flex aspect-[3/4] items-center justify-center p-0">
+                                    <Image
+                                    src={image.imageUrl}
+                                    alt={image.description}
+                                    width={600}
+                                    height={800}
+                                    className="w-full h-full object-cover"
+                                    />
+                                </CardContent>
+                            </Card>
+                        </DialogTrigger>
+                    </div>
+                    ))}
                 </div>
-                ))}
-            </div>
-            {selectedImage && (
-                <DialogContent className="max-w-none w-auto h-auto bg-transparent border-none p-0">
-                    <Image
-                        src={selectedImage}
-                        alt="Preview"
-                        width={1200}
-                        height={1600}
-                        className="w-auto h-auto max-w-[90vw] max-h-[90vh] object-contain rounded-lg"
-                    />
-                </DialogContent>
-            )}
-        </Dialog>
+                {selectedImage && (
+                    <DialogContent className="max-w-none w-auto h-auto bg-transparent border-none p-0">
+                        <Image
+                            src={selectedImage}
+                            alt="Preview"
+                            width={1200}
+                            height={1600}
+                            className="w-auto h-auto max-w-[90vw] max-h-[90vh] object-contain rounded-lg"
+                        />
+                    </DialogContent>
+                )}
+            </Dialog>
+        </div>
       </BlurFade>
     </section>
   );
