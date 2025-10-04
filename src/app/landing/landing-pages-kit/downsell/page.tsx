@@ -25,7 +25,7 @@ export default function DownsellPage() {
         
         <div className="text-center my-8">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-pink-500">
-            Você ganhou um último desconto para <br/> acessar a <span className="text-primary-foreground underline">Oferta Premium</span> mas com <span className="text-primary-foreground underline">menos bônus!</span>
+            Você ganhou um último desconto para <br/> acessar a <span className="text-primary-foreground font-bold">Oferta Premium</span> mas com <span className="text-primary-foreground font-bold">menos bônus!</span>
           </h2>
         </div>
 
