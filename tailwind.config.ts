@@ -99,7 +99,14 @@ export default {
         'wave': {
           '0%': { 'background-position-x': '0' },
           '100%': { 'background-position-x': '-1440px' },
-        }
+        },
+        'glow-pulse': {
+            '0%, 100%': { 'box-shadow': '0 0 10px -5px hsl(var(--accent))' },
+            '50%': { 'box-shadow': '0 0 20px 5px hsl(var(--accent))' },
+        },
+        'shine': {
+          'to': { 'transform': 'translateX(100%) skewX(-25deg)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -107,6 +114,7 @@ export default {
         'blob': 'blob 7s infinite ease-in-out',
         'wave': 'wave 20s linear infinite',
         'wave-delay': 'wave 30s linear infinite',
+        'glow-pulse': 'glow-pulse 3s infinite ease-in-out',
       },
     },
   },

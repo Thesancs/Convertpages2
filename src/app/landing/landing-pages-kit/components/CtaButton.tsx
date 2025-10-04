@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Check, Loader2 } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from "@/hooks/use-toast"
+import { cn } from '@/lib/utils';
 
 export function CtaButton({ className, children }: { className?: string, children?: React.ReactNode }) {
   const [isLoading, setIsLoading] = useState(false);
@@ -37,7 +38,11 @@ export function CtaButton({ className, children }: { className?: string, childre
   return (
     <Button
       size="lg"
-      className={`bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-base shadow-lg shadow-accent/30 transition-all duration-300 transform hover:scale-105 ${className}`}
+      className={cn(
+        'bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-base shadow-lg transition-all duration-300 transform hover:scale-105',
+        'animate-glow-pulse btn-shine',
+        className
+      )}
       onClick={handleClick}
       disabled={isLoading || isSuccess}
     >
