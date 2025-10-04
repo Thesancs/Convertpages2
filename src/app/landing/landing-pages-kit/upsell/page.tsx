@@ -32,7 +32,7 @@ const premiumFeatures = [
 export default function UpsellPage() {
   return (
     <div className="bg-background text-foreground min-h-screen flex flex-col items-center">
-      <div className="w-full bg-gradient-to-r from-accent to-pink-500 text-white text-center py-2 font-bold">
+      <div className="w-full bg-gradient-to-r from-accent to-pink-500 text-white text-center py-2 font-bold uppercase tracking-wider [text-shadow:0_0_5px_rgba(255,255,255,0.7)]">
         Oferta Premium com desconto especial liberado!
       </div>
       

@@ -16,7 +16,7 @@ const downsellFeatures = [
 export default function DownsellPage() {
   return (
     <div className="bg-background text-foreground min-h-screen flex flex-col items-center">
-      <div className="w-full bg-gradient-to-r from-accent to-pink-500 text-white text-center py-2 font-bold uppercase tracking-wider">
+      <div className="w-full bg-gradient-to-r from-accent to-pink-500 text-white text-center py-2 font-bold uppercase tracking-wider [text-shadow:0_0_5px_rgba(255,255,255,0.7)]">
         Ops... As vagas para a OFERTA BÁSICA ACABARAM!
       </div>
       
