@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Check } from 'lucide-react';
+import { Check, Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 
@@ -72,6 +72,11 @@ export function Pricing() {
                             <div>
                                 <CardHeader>
                                     <CardTitle className="font-headline text-3xl">Oferta Premium</CardTitle>
+                                    <div className="flex items-center gap-1 mt-2">
+                                        {Array(5).fill(0).map((_, i) => (
+                                            <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                                        ))}
+                                    </div>
                                 </CardHeader>
                                 <CardContent className="space-y-4">
                                     <ul className="space-y-2 text-sm">
