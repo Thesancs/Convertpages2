@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { CheckCircle2 } from 'lucide-react';
 import { CtaButton } from './CtaButton';
 import { BlurFade } from './BlurFade';
+import { GlowingCheck } from './GlowingCheck';
 
 const features = [
   "+2.000 Modelos de Landing Pages",
@@ -35,8 +35,8 @@ export function WhatYouGet() {
                   delay={0.3 + index * 0.15}
                   yOffset={10}
                 >
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" style={{ filter: 'drop-shadow(0 0 3px rgba(34, 197, 94, 0.8))' }} />
+                   <li className="flex items-start">
+                    <GlowingCheck />
                     <span className="text-lg text-foreground">{feature}</span>
                   </li>
                 </BlurFade>
