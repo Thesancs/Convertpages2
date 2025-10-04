@@ -4,6 +4,7 @@ import { Check, Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { CtaButton } from './CtaButton';
+import Link from 'next/link';
 
 const premiumFeatures = [
     { text: "Acesso Completo as Páginas de Vendas", price: "97" },
@@ -35,11 +36,11 @@ export function Pricing() {
         <section id="pricing" className="py-8 md:py-12 bg-secondary/50 overflow-hidden">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-                    {/* Plano Básico */}
+                    {/* Plano Essencial */}
                     <Card className="bg-gradient-to-br from-primary via-indigo-900 to-black text-primary-foreground p-6 rounded-2xl h-full flex flex-col justify-between w-full">
                         <div>
                             <CardHeader>
-                                <CardTitle className="font-headline text-3xl">Plano Básico</CardTitle>
+                                <CardTitle className="font-headline text-3xl">Plano Essencial</CardTitle>
                             </CardHeader>
                             <CardContent className="space-y-4">
                                 <ul className="space-y-2">
@@ -57,7 +58,18 @@ export function Pricing() {
                             </CardContent>
                         </div>
                         <div className="px-6 pb-6">
-                            <CtaButton className="w-full">QUERO O PLANO BÁSICO!</CtaButton>
+                            <Link href="/landing/landing-pages-kit/upsell">
+                              <Button
+                                size="lg"
+                                className={cn(
+                                  'font-bold text-base transition-all duration-300 transform hover:scale-105',
+                                  'btn-new-cta',
+                                  'w-full'
+                                )}
+                              >
+                                QUERO O PLANO ESSENCIAL!
+                              </Button>
+                            </Link>
                             <p className="text-center mt-4 text-sm text-muted-foreground">
                                 Mas antes de comprar… temos uma oferta MAIS vantajosa para você! Veja abaixo...
                             </p>
