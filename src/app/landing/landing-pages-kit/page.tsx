@@ -9,7 +9,6 @@ import { FinalCta } from './components/FinalCta';
 import { Faq } from './components/Faq';
 import { Footer } from './components/Footer';
 import { FloatingCta } from './components/FloatingCta';
-import { Portfolio } from './components/Portfolio';
 
 export default function LandingPagesKitPage() {
   console.log('[LandingPagesKit]', 'Page rendered');
@@ -18,7 +17,6 @@ export default function LandingPagesKitPage() {
       <Header />
       <main>
         <Hero />
-        <Portfolio />
         <Benefits />
         <WhatYouGet />
         <Differentiators />
