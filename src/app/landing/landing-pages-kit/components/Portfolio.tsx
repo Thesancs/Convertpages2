@@ -30,7 +30,7 @@ export function Portfolio() {
       >
         <div className="flex animate-marquee-fast hover:[animation-play-state:paused]">
             {[...portfolioImages, ...portfolioImages].map((image, index) => (
-              <div key={index} className="flex-shrink-0 w-80 px-4">
+              <div key={index} className="flex-shrink-0 w-64 md:w-80 px-4">
                   <Card className="overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-1">
                     <CardContent className="flex aspect-[3/4] items-center justify-center p-0">
                         <Image

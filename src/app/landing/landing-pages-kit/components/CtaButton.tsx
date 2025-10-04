@@ -7,9 +7,8 @@ import { cn } from '@/lib/utils';
 
 export function CtaButton({ className, children }: { className?: string, children?: React.ReactNode }) {
   return (
-    <Link href="#pricing" passHref>
+    <Link href="#pricing">
       <Button
-        asChild
         size="lg"
         className={cn(
           'font-bold text-base transition-all duration-300 transform hover:scale-105',
@@ -17,14 +16,12 @@ export function CtaButton({ className, children }: { className?: string, childre
           className
         )}
       >
-        <a>
-            {children || (
-                <>
-                  Quero Acesso Imediato
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </>
-            )}
-        </a>
+        {children || (
+            <>
+              Quero Acesso Imediato
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </>
+        )}
       </Button>
     </Link>
   );
