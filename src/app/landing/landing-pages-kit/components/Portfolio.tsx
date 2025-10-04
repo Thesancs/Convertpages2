@@ -15,15 +15,6 @@ const localPortfolioImages = [
   { imageUrl: '/LandingPages/lp6.webp', description: 'Modelo de Landing Page 6' },
   { imageUrl: '/LandingPages/lp7.webp', description: 'Modelo de Landing Page 7' },
   { imageUrl: '/LandingPages/lp8.webp', description: 'Modelo de Landing Page 8' },
-  { imageUrl: '/LandingPages/9.webp', description: 'Modelo de Landing Page 9' },
-  { imageUrl: '/LandingPages/10.webp', description: 'Modelo de Landing Page 10' },
-  { imageUrl: '/LandingPages/11.webp', description: 'Modelo de Landing Page 11' },
-  { imageUrl: '/LandingPages/12.webp', description: 'Modelo de Landing Page 12' },
-  { imageUrl: '/LandingPages/13.webp', description: 'Modelo de Landing Page 13' },
-  { imageUrl: '/LandingPages/14.webp', description: 'Modelo de Landing Page 14' },
-  { imageUrl: '/LandingPages/15.webp', description: 'Modelo de Landing Page 15' },
-  { imageUrl: '/LandingPages/16.webp', description: 'Modelo de Landing Page 16' },
-  { imageUrl: '/LandingPages/17.webp', description: 'Modelo de Landing Page 17' },
 ];
 
 
