@@ -25,7 +25,7 @@ export function Header() {
     >
       <div className="container mx-auto flex h-20 md:h-24 items-center justify-center md:justify-between px-4 md:px-6">
         <Link href="/landing/landing-pages-kit" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="LandingPro Kit Logo" width={240} height={68} className="h-16 w-auto" />
+          <Image src="/logo.png" alt="LandingPro Kit Logo" width={240} height={68} className="h-16 md:h-20 w-auto" />
         </Link>
         <div className="hidden md:block">
           <CtaButton />
