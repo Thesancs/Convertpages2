@@ -27,16 +27,22 @@ export function WhatYouGet() {
           </p>
         </BlurFade>
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <BlurFade delay={0.3} yOffset={20} className="space-y-6">
+          <div className="space-y-6">
             <ul className="space-y-4">
               {features.map((feature, index) => (
-                <li key={index} className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-lg text-foreground">{feature}</span>
-                </li>
+                <BlurFade
+                  key={index}
+                  delay={0.3 + index * 0.15}
+                  yOffset={10}
+                >
+                  <li className="flex items-start">
+                    <CheckCircle2 className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" style={{ filter: 'drop-shadow(0 0 3px rgba(34, 197, 94, 0.8))' }} />
+                    <span className="text-lg text-foreground">{feature}</span>
+                  </li>
+                </BlurFade>
               ))}
             </ul>
-          </BlurFade>
+          </div>
           <BlurFade delay={0.4} yOffset={20}>
             {image && (
               <Image
