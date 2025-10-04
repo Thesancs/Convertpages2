@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
-import { Rocket } from 'lucide-react';
+import Image from 'next/image';
 import { CtaButton } from './CtaButton';
 
 export function Header() {
@@ -25,7 +25,7 @@ export function Header() {
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/landing/landing-pages-kit" className="flex items-center gap-2">
-          <Rocket className="h-7 w-7 text-primary" />
+          <Image src="/logo.png" alt="LandingPro Kit Logo" width={40} height={40} className="h-10 w-10" />
           <span className="text-xl font-bold font-headline text-foreground">LandingPro Kit</span>
         </Link>
         <div className="hidden md:block">
