@@ -69,13 +69,13 @@ export function Portfolio() {
                 ))}
             </div>
             {selectedImage && (
-                <DialogContent className="max-w-4xl p-0">
+                <DialogContent className="max-w-none w-auto h-auto bg-transparent border-none p-0">
                     <Image
                         src={selectedImage}
                         alt="Preview"
                         width={1200}
                         height={1600}
-                        className="w-full h-auto object-contain rounded-lg"
+                        className="w-auto h-auto max-w-[90vw] max-h-[90vh] object-contain rounded-lg"
                     />
                 </DialogContent>
             )}
