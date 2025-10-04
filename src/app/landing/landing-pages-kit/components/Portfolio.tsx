@@ -40,7 +40,7 @@ export function Portfolio() {
         className="relative w-full"
       >
         <Dialog>
-            <div className="flex animate-marquee hover:[animation-play-state:paused]">
+            <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
                 {[...localPortfolioImages, ...localPortfolioImages].map((image, index) => (
                 <div key={index} className="flex-shrink-0 w-64 md:w-80">
                     <DialogTrigger asChild onClick={() => setSelectedImage(image.imageUrl)}>
