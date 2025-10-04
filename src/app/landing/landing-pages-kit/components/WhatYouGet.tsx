@@ -19,7 +19,7 @@ export function WhatYouGet() {
     <section className="py-8 md:py-12 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
         <BlurFade delay={0.2} yOffset={20} className="text-center mb-12">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-500">
+          <h2 className="font-headline text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-pink-500">
             O que você vai receber?
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
