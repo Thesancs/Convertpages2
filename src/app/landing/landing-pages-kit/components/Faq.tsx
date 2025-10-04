@@ -19,9 +19,9 @@ export function Faq() {
         </div>
         <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
           {faqs.map((faq, index) => (
-            <AccordionItem value={`item-${index}`} key={index}>
-              <AccordionTrigger className="text-lg font-semibold text-left">{faq.q}</AccordionTrigger>
-              <AccordionContent className="text-base text-muted-foreground">
+            <AccordionItem value={`item-${index}`} key={index} className="bg-gradient-to-br from-primary via-indigo-900 to-black text-primary-foreground rounded-lg mb-2 px-6">
+              <AccordionTrigger className="text-lg font-semibold text-left text-primary-foreground hover:no-underline">{faq.q}</AccordionTrigger>
+              <AccordionContent className="text-base text-primary-foreground/80">
                 {faq.a}
               </AccordionContent>
             </AccordionItem>

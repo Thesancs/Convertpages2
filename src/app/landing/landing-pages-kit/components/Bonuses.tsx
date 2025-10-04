@@ -27,16 +27,16 @@ export function Bonuses() {
             return (
               <Card
                 key={index}
-                className="overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2 animate-in fade-in zoom-in-95"
+                className="overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2 animate-in fade-in zoom-in-95 bg-gradient-to-br from-primary via-indigo-900 to-black text-primary-foreground"
                 style={{ animationDelay: `${150 + index * 150}ms`, animationFillMode: 'backwards' }}
               >
                 {image && <Image src={image.imageUrl} alt={image.description} width={600} height={400} className="w-full object-cover aspect-[3/2]" data-ai-hint={image.imageHint} />}
                 <CardHeader>
                   <Badge className="bg-accent text-accent-foreground mb-2 w-fit">BÔNUS #{index + 1}</Badge>
-                  <CardTitle className="font-headline text-xl">{bonus.title}</CardTitle>
+                  <CardTitle className="font-headline text-xl text-primary-foreground">{bonus.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{bonus.description}</p>
+                  <p className="text-primary-foreground/80">{bonus.description}</p>
                 </CardContent>
               </Card>
             );

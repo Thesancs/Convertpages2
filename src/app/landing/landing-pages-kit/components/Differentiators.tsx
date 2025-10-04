@@ -20,16 +20,16 @@ export function Differentiators() {
           {diffs.map((d, i) => (
             <Card
               key={i}
-              className="p-8 text-center bg-card/50 backdrop-blur-sm border-border/50 shadow-md animate-in fade-in zoom-in-95"
+              className="p-8 text-center shadow-md animate-in fade-in zoom-in-95 bg-gradient-to-br from-primary via-indigo-900 to-black text-primary-foreground"
               style={{ animationDelay: `${150 + i * 150}ms`, animationFillMode: 'backwards' }}
             >
                 <div className="flex justify-center mb-4">
                     <div className="bg-primary/10 p-4 rounded-full">
-                        <d.icon className="h-8 w-8 text-primary" />
+                        <d.icon className="h-8 w-8 text-accent" />
                     </div>
                 </div>
-                <h3 className="text-xl font-headline font-semibold">{d.title}</h3>
-                <p className="mt-2 text-muted-foreground">{d.description}</p>
+                <h3 className="text-xl font-headline font-semibold text-primary-foreground">{d.title}</h3>
+                <p className="mt-2 text-primary-foreground/80">{d.description}</p>
             </Card>
           ))}
         </div>
