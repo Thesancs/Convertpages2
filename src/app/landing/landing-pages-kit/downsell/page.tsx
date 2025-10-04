@@ -24,8 +24,8 @@ export default function DownsellPage() {
         <Image src="/pack-2-2.webp" alt="LandingPro Kit Pack" width={500} height={500} className="mx-auto" />
         
         <div className="text-center my-8">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-primary-foreground tracking-tight leading-tight">
-            Você ganhou um último desconto para <br/> acessar a <span className="underline">Oferta Premium</span> mas com <span className="underline">menos bônus!</span>
+          <h2 className="font-headline text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-pink-500">
+            Você ganhou um último desconto para <br/> acessar a <span className="text-primary-foreground underline">Oferta Premium</span> mas com <span className="text-primary-foreground underline">menos bônus!</span>
           </h2>
         </div>
 
