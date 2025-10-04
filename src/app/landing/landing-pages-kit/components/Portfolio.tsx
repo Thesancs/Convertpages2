@@ -34,7 +34,7 @@ export function Portfolio() {
 
     const applyStyles = () => {
         const engine = api.internalEngine();
-        if (!engine || !engine.slidesInView) return;
+        if (!engine || !engine.slides) return;
 
         const scrollProgress = api.scrollProgress();
 
@@ -55,7 +55,13 @@ export function Portfolio() {
 
     api.on("select", onSelect);
     api.on("scroll", applyStyles);
-    api.on("reInit", applyStyles);
+    api.on("reInit", () => {
+        // We need a small delay to ensure the engine is ready after re-initialization
+        setTimeout(() => {
+            onSelect();
+            applyStyles();
+        }, 0);
+    });
 
     // Initial setup
     onSelect();
