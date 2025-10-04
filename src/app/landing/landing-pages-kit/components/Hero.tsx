@@ -7,7 +7,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 export function Hero() {
 
   return (
-    <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-gradient-to-br from-primary via-indigo-900 to-black">
+    <section className="relative pt-32 pb-8 md:pt-40 md:pb-12 overflow-hidden bg-gradient-to-br from-primary via-indigo-900 to-black">
        <div className="absolute top-0 left-0 w-full h-full opacity-30">
         <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-wave-pattern bg-repeat-x animate-wave"></div>
         <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-wave-pattern bg-repeat-x animate-wave-delay opacity-50"></div>

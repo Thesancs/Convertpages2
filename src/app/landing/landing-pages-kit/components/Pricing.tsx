@@ -32,7 +32,7 @@ const premiumFeatures = [
 
 export function Pricing() {
     return (
-        <section id="pricing" className="py-16 md:py-24 bg-secondary/50 overflow-hidden">
+        <section id="pricing" className="py-8 md:py-12 bg-secondary/50 overflow-hidden">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
                     {/* Plano Básico */}

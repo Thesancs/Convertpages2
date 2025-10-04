@@ -10,7 +10,7 @@ const audience = [
 
 export function TargetAudience() {
   return (
-    <section className="py-16 md:py-24 bg-secondary/50">
+    <section className="py-8 md:py-12 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
         <BlurFade delay={0.2} yOffset={20} className="text-center mb-12">
             <div className="inline-block bg-primary/10 text-primary p-3 rounded-full mb-4">
