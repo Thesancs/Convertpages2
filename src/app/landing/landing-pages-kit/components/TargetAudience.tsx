@@ -16,7 +16,7 @@ export function TargetAudience() {
             <div className="inline-block bg-primary/10 text-primary p-3 rounded-full mb-4">
               <Users className="h-8 w-8" />
             </div>
-            <h2 className="font-headline text-3xl md:text-4xl font-bold text-foreground">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-500">
               Para Quem é o LandingPro Kit?
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">

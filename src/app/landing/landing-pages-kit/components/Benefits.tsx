@@ -12,6 +12,11 @@ export function Benefits() {
   return (
     <section className="py-8 md:py-12 bg-background">
       <div className="container mx-auto px-4 md:px-6">
+        <BlurFade delay={0.2} yOffset={20} className="text-center mb-12">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-purple-500">
+                Benefícios Imediatos
+            </h2>
+        </BlurFade>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => (
             <BlurFade
