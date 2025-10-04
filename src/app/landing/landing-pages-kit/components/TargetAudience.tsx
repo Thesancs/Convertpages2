@@ -2,6 +2,7 @@ import { Users } from 'lucide-react';
 import { CtaButton } from './CtaButton';
 import { BlurFade } from './BlurFade';
 import { GlowingBadge } from './GlowingBadge';
+import { GlowingIcon } from './GlowingIcon';
 
 const audience = [
   "Afiliados", "Produtores Digitais", "Lançadores",
@@ -13,9 +14,9 @@ export function TargetAudience() {
     <section className="py-8 md:py-12 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
         <BlurFade delay={0.2} yOffset={20} className="text-center mb-12">
-            <div className="inline-block bg-primary/10 text-primary p-3 rounded-full mb-4">
+            <GlowingIcon>
               <Users className="h-8 w-8" />
-            </div>
+            </GlowingIcon>
             <h2 className="font-headline text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-pink-500">
               Para quem é o Convert Pages Kig 2k?
             </h2>
