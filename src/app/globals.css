@@ -107,6 +107,7 @@ body {
       rgba(255, 255, 255, 0.5) 60%,
       rgba(255, 255, 255, 0)
     );
+    animation: shine 2s infinite;
   }
   .btn-shine:hover::after {
     animation: shine 1s forwards;

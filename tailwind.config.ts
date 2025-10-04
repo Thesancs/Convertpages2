@@ -101,7 +101,7 @@ export default {
           '100%': { 'background-position-x': '-1440px' },
         },
         'shine': {
-          'to': { 'transform': 'translateX(100%) skewX(-25deg)' },
+          '100%': { 'transform': 'translateX(100%) skewX(-25deg)' },
         },
       },
       animation: {
@@ -110,6 +110,7 @@ export default {
         'blob': 'blob 7s infinite ease-in-out',
         'wave': 'wave 20s linear infinite',
         'wave-delay': 'wave 30s linear infinite',
+        'shine': 'shine 1s forwards',
       },
     },
   },
