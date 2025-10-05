@@ -107,6 +107,10 @@ export default {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-100%)' },
         },
+        'marquee-testimonials': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -116,6 +120,7 @@ export default {
         'wave-delay': 'wave 30s linear infinite',
         'shine': 'shine 1s forwards',
         'marquee': 'marquee 30s linear infinite',
+        'marquee-testimonials': 'marquee-testimonials 25s linear infinite',
       },
     },
   },
