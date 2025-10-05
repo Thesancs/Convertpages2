@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { BlurFade } from './BlurFade';
 
@@ -17,7 +16,6 @@ const testimonialImages = [
 
 
 export function Testimonials() {
-    const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     <section className="py-8 md:py-12 bg-background overflow-hidden">
@@ -38,50 +36,34 @@ export function Testimonials() {
         className="w-full"
       >
         <div className="relative">
-             <Dialog>
-                <Carousel
-                    opts={{
-                        align: "start",
-                    }}
-                    className="w-full max-w-6xl mx-auto"
-                    >
-                    <CarouselContent className="-ml-4">
-                        {testimonialImages.map((image, index) => (
-                        <CarouselItem key={index} className="pl-4 basis-1/2">
-                            <div className="flex-shrink-0 w-full">
-                                <DialogTrigger asChild onClick={() => setSelectedImage(image.imageUrl)}>
-                                    <Card className="overflow-hidden shadow-lg cursor-pointer rounded-lg bg-transparent border-none">
-                                        <CardContent className="flex aspect-[3/4] items-center justify-center p-0">
-                                            <Image
-                                            src={image.imageUrl}
-                                            alt={image.description}
-                                            width={360}
-                                            height={640}
-                                            className="w-full h-full object-contain"
-                                            />
-                                        </CardContent>
-                                    </Card>
-                                </DialogTrigger>
-                            </div>
-                        </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                    <CarouselPrevious className="absolute -left-4 top-1/2 -translate-y-1/2 bg-primary/50 border-accent/30 text-accent shadow-accent/50 shadow-lg hover:bg-accent/20 hover:shadow-accent/80 transition-all" />
-                    <CarouselNext className="absolute -right-4 top-1/2 -translate-y-1/2 bg-primary/50 border-accent/30 text-accent shadow-accent/50 shadow-lg hover:bg-accent/20 hover:shadow-accent/80 transition-all" />
-                </Carousel>
-
-                {selectedImage && (
-                    <DialogContent className="max-w-none w-auto h-auto bg-transparent border-none p-0">
-                        <Image
-                            src={selectedImage}
-                            alt="Preview"
-                            width={720}
-                            height={1280}
-                            className="w-auto h-auto max-w-[90vw] max-h-[90vh] object-contain rounded-lg"
-                        />
-                    </DialogContent>
-                )}
-            </Dialog>
+            <Carousel
+                opts={{
+                    align: "start",
+                }}
+                className="w-full max-w-6xl mx-auto"
+                >
+                <CarouselContent className="-ml-4">
+                    {testimonialImages.map((image, index) => (
+                    <CarouselItem key={index} className="pl-4 basis-1/2">
+                        <div className="flex-shrink-0 w-full">
+                            <Card className="overflow-hidden shadow-lg cursor-pointer rounded-lg bg-transparent border-none">
+                                <CardContent className="flex aspect-[3/4] items-center justify-center p-0">
+                                    <Image
+                                    src={image.imageUrl}
+                                    alt={image.description}
+                                    width={360}
+                                    height={640}
+                                    className="w-full h-full object-contain"
+                                    />
+                                </CardContent>
+                            </Card>
+                        </div>
+                    </CarouselItem>
+                    ))}
+                </CarouselContent>
+                <CarouselPrevious className="absolute -left-4 top-1/2 -translate-y-1/2 bg-primary/50 border-accent/30 text-accent shadow-accent/50 shadow-lg hover:bg-accent/20 hover:shadow-accent/80 transition-all" />
+                <CarouselNext className="absolute -right-4 top-1/2 -translate-y-1/2 bg-primary/50 border-accent/30 text-accent shadow-accent/50 shadow-lg hover:bg-accent/20 hover:shadow-accent/80 transition-all" />
+            </Carousel>
         </div>
       </BlurFade>
     </section>
