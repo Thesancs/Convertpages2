@@ -1,5 +1,3 @@
-import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { CtaButton } from './CtaButton';
 import { BlurFade } from './BlurFade';
 import { GlowingCheck } from './GlowingCheck';
@@ -13,8 +11,6 @@ const features = [
 ];
 
 export function WhatYouGet() {
-  const image = PlaceHolderImages.find(p => p.id === 'what-you-get');
-
   return (
     <section className="py-8 md:py-12 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
@@ -26,7 +22,7 @@ export function WhatYouGet() {
             Um arsenal completo para você construir ofertas irresistíveis e vender todos os dias.
           </p>
         </BlurFade>
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="flex justify-center">
           <div className="space-y-6">
             <ul className="space-y-4">
               {features.map((feature, index) => (
@@ -43,18 +39,6 @@ export function WhatYouGet() {
               ))}
             </ul>
           </div>
-          <BlurFade delay={0.4} yOffset={20}>
-            {image && (
-              <Image
-                src={image.imageUrl}
-                alt={image.description}
-                width={800}
-                height={600}
-                className="rounded-xl shadow-lg ring-1 ring-border/10"
-                data-ai-hint={image.imageHint}
-              />
-            )}
-          </BlurFade>
         </div>
         <BlurFade delay={0.5} yOffset={0} className="text-center mt-16">
           <CtaButton />
