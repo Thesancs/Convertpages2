@@ -119,7 +119,7 @@ export default {
         'wave': 'wave 20s linear infinite',
         'wave-delay': 'wave 30s linear infinite',
         'shine': 'shine 1s forwards',
-        'marquee': 'marquee 50s linear infinite',
+        'marquee': 'marquee 80s linear infinite',
         'marquee-testimonials': 'marquee-testimonials 80s linear infinite',
       },
     },
