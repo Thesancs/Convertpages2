@@ -51,7 +51,7 @@ export function Testimonials() {
                             <div className="flex-shrink-0 w-full">
                                 <DialogTrigger asChild onClick={() => setSelectedImage(image.imageUrl)}>
                                     <Card className="overflow-hidden shadow-lg cursor-pointer rounded-lg bg-transparent border-none">
-                                        <CardContent className="flex aspect-[9/16] items-center justify-center p-0">
+                                        <CardContent className="flex aspect-[3/4] items-center justify-center p-0">
                                             <Image
                                             src={image.imageUrl}
                                             alt={image.description}
