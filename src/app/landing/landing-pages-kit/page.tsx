@@ -10,6 +10,7 @@ import { Faq } from './components/Faq';
 import { Footer } from './components/Footer';
 import { FloatingCta } from './components/FloatingCta';
 import { Portfolio } from './components/Portfolio';
+import { Testimonials } from './components/Testimonials';
 
 export default function LandingPagesKitPage() {
   console.log('[LandingPagesKit]', 'Page rendered');
@@ -23,6 +24,7 @@ export default function LandingPagesKitPage() {
         <WhatYouGet />
         <Differentiators />
         <TargetAudience />
+        <Testimonials />
         <Bonuses />
         <Pricing />
         <Faq />
