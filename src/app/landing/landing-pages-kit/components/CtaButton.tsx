@@ -5,9 +5,9 @@ import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
-export function CtaButton({ className, children }: { className?: string, children?: React.ReactNode }) {
+export function CtaButton({ className, children, href = "#pricing" }: { className?: string, children?: React.ReactNode, href?: string }) {
   return (
-    <Link href="#pricing">
+    <Link href={href}>
       <Button
         size="lg"
         className={cn(

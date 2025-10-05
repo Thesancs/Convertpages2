@@ -56,9 +56,11 @@ export default function DownsellPage() {
           </p>
           <p className="text-sm text-muted-foreground">(ou R$25,90 à vista!)</p>
           
-          <Button size="lg" className="mt-8 w-full max-w-md font-bold text-lg bg-red-600 hover:bg-red-700 text-white shadow-lg transform hover:scale-105 transition-transform duration-300">
-            SIM! QUERO FAZER O UPGRADE!
-          </Button>
+          <Link href="https://pay.kiwify.com.br/5kshqc9">
+            <Button size="lg" className="mt-8 w-full max-w-md font-bold text-lg bg-red-600 hover:bg-red-700 text-white shadow-lg transform hover:scale-105 transition-transform duration-300">
+              SIM! QUERO FAZER O UPGRADE!
+            </Button>
+          </Link>
           <Link href="/landing/landing-pages-kit/upsell" className="block mt-4 text-muted-foreground hover:text-primary-foreground transition-colors underline">
             Voltar para oferta anterior !
           </Link>

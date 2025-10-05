@@ -116,7 +116,7 @@ export function Pricing() {
                                 </CardContent>
                             </div>
                             <div className="px-6 pb-6">
-                                 <CtaButton className="w-full text-lg">QUERO A OFERTA PREMIUM!</CtaButton>
+                                 <CtaButton href="https://pay.kiwify.com.br/G85RPt3" className="w-full text-lg">QUERO A OFERTA PREMIUM!</CtaButton>
                             </div>
                         </Card>
                     </div>
