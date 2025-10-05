@@ -47,31 +47,29 @@ export function Testimonials() {
                     }}
                     className="w-full max-w-6xl mx-auto"
                     >
-                    <div className="flex justify-center items-center gap-2">
-                      <CarouselPrevious className="static -translate-x-0 -translate-y-0 sm:absolute sm:-left-4 sm:top-1/2 sm:-translate-y-1/2 bg-primary/50 border-accent/30 text-accent shadow-accent/50 shadow-lg hover:bg-accent/20 hover:shadow-accent/80 transition-all" />
-                      <CarouselContent className="-ml-4">
-                          {testimonialImages.map((image, index) => (
-                          <CarouselItem key={index} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                              <div className="flex-shrink-0 w-full">
-                                  <DialogTrigger asChild onClick={() => setSelectedImage(image.imageUrl)}>
-                                      <Card className="overflow-hidden shadow-lg cursor-pointer rounded-lg bg-transparent border-none">
-                                          <CardContent className="flex aspect-[9/16] items-center justify-center p-0">
-                                              <Image
-                                              src={image.imageUrl}
-                                              alt={image.description}
-                                              width={360}
-                                              height={640}
-                                              className="w-full h-full object-contain"
-                                              />
-                                          </CardContent>
-                                      </Card>
-                                  </DialogTrigger>
-                              </div>
-                          </CarouselItem>
-                          ))}
-                      </CarouselContent>
-                      <CarouselNext className="static -translate-x-0 -translate-y-0 sm:absolute sm:-right-4 sm:top-1/2 sm:-translate-y-1/2 bg-primary/50 border-accent/30 text-accent shadow-accent/50 shadow-lg hover:bg-accent/20 hover:shadow-accent/80 transition-all" />
-                    </div>
+                    <CarouselContent className="-ml-4">
+                        {testimonialImages.map((image, index) => (
+                        <CarouselItem key={index} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                            <div className="flex-shrink-0 w-full">
+                                <DialogTrigger asChild onClick={() => setSelectedImage(image.imageUrl)}>
+                                    <Card className="overflow-hidden shadow-lg cursor-pointer rounded-lg bg-transparent border-none">
+                                        <CardContent className="flex aspect-[9/16] items-center justify-center p-0">
+                                            <Image
+                                            src={image.imageUrl}
+                                            alt={image.description}
+                                            width={360}
+                                            height={640}
+                                            className="w-full h-full object-contain"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                </DialogTrigger>
+                            </div>
+                        </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="absolute -left-4 top-1/2 -translate-y-1/2 bg-primary/50 border-accent/30 text-accent shadow-accent/50 shadow-lg hover:bg-accent/20 hover:shadow-accent/80 transition-all" />
+                    <CarouselNext className="absolute -right-4 top-1/2 -translate-y-1/2 bg-primary/50 border-accent/30 text-accent shadow-accent/50 shadow-lg hover:bg-accent/20 hover:shadow-accent/80 transition-all" />
                 </Carousel>
 
                 {selectedImage && (
