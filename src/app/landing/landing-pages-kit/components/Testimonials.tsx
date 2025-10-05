@@ -68,8 +68,8 @@ export function Testimonials() {
                         </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <CarouselPrevious className="hidden md:flex" />
-                    <CarouselNext className="hidden md:flex" />
+                    <CarouselPrevious className="flex -left-4" />
+                    <CarouselNext className="flex -right-4" />
                 </Carousel>
 
                 {selectedImage && (
