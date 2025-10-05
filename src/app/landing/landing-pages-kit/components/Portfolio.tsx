@@ -45,9 +45,9 @@ export function Portfolio() {
             <Dialog>
                 <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
                     {[...localPortfolioImages, ...localPortfolioImages].map((image, index) => (
-                    <div key={index} className="flex-shrink-0 w-64 md:w-80">
+                    <div key={index} className="flex-shrink-0 w-64 md:w-80 mx-2">
                         <DialogTrigger asChild onClick={() => setSelectedImage(image.imageUrl)}>
-                            <Card className="overflow-hidden shadow-lg cursor-pointer">
+                            <Card className="overflow-hidden shadow-lg cursor-pointer rounded-lg">
                                 <CardContent className="flex aspect-[3/4] items-center justify-center p-0">
                                     <Image
                                     src={image.imageUrl}
