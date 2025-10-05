@@ -11,9 +11,8 @@ const testimonialImages = [
   { imageUrl: '/Depoiments/dp 2.webp', description: 'Depoimento 1' },
   { imageUrl: '/Depoiments/dp 4.webp', description: 'Depoimento 2' },
   { imageUrl: '/Depoiments/dp 6.webp', description: 'Depoimento 3' },
-  { imageUrl: '/Depoiments/dp-3-1 (1).webp', description: 'Depoimento 4' },
-  { imageUrl: '/Depoiments/dp-3-1.webp', description: 'Depoimento 5' },
-  { imageUrl: '/Depoiments/dp5.webp', description: 'Depoimento 6' },
+  { imageUrl: '/Depoiments/dp 7.webp', description: 'Depoimento 4' },
+  { imageUrl: '/Depoiments/dp5.webp', description: 'Depoimento 5' },
 ];
 
 
@@ -51,7 +50,7 @@ export function Testimonials() {
                       <CarouselPrevious />
                       <CarouselContent className="-ml-4">
                           {testimonialImages.map((image, index) => (
-                          <CarouselItem key={index} className="pl-4 basis-1/3 md:basis-1/4 lg:basis-1/5">
+                          <CarouselItem key={index} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
                               <div className="flex-shrink-0 w-full">
                                   <DialogTrigger asChild onClick={() => setSelectedImage(image.imageUrl)}>
                                       <Card className="overflow-hidden shadow-lg cursor-pointer rounded-lg">
