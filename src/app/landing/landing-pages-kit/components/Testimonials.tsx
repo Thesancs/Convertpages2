@@ -47,7 +47,7 @@ export function Testimonials() {
                     >
                     <CarouselContent className="-ml-4">
                         {testimonialImages.map((image, index) => (
-                        <CarouselItem key={index} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
+                        <CarouselItem key={index} className="pl-4 basis-1/2">
                             <div className="flex-shrink-0 w-full">
                                 <DialogTrigger asChild onClick={() => setSelectedImage(image.imageUrl)}>
                                     <Card className="overflow-hidden shadow-lg cursor-pointer rounded-lg bg-transparent border-none">
