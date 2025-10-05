@@ -24,7 +24,7 @@ export default function DownsellPage() {
         
         <div className="text-center my-8">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-pink-500 uppercase">
-            Você ganhou <span className="text-white [text-shadow:0_0_8px_rgba(255,255,255,0.7)]">um último desconto</span> para <br/> acessar a Oferta Premium mas com <span className="text-primary-foreground font-bold [text-shadow:0_0_8px_rgba(255,255,255,0.7)]">menos bônus!</span>
+            Você ganhou <span className="text-white [text-shadow:0_0_8px_rgba(255,255,255,0.7)]">um último desconto</span> para <br/> acessar a Oferta Premium mas com <span className="text-primary-foreground font-bold [text-shadow:0_0_8px_hsl(var(--accent)/0.7)]">menos bônus!</span>
           </h2>
         </div>
 
@@ -49,11 +49,12 @@ export default function DownsellPage() {
         </Card>
 
         <div className="text-center bg-gradient-to-br from-primary via-indigo-900 to-black text-primary-foreground rounded-xl p-6 md:p-8 max-w-2xl w-full border-border/50 shadow-lg">
-          <p className="text-lg font-semibold text-primary-foreground">Oferta Premium com preço exclusivo somente nessa página por apenas:</p>
+          <p className="text-lg font-semibold text-primary-foreground">Oferta Premium com preço exclusivo somente nessa página</p>
           <p className="text-lg text-muted-foreground mt-4">de <span className="line-through">R$197</span> por apenas</p>
-          <p className="text-7xl font-bold my-2 text-green-500 drop-shadow-lg [filter:drop-shadow(0_0_10px_rgba(34,197,94,0.6))]">
-            R$25,90
+          <p className="text-6xl font-bold my-2 text-green-500 drop-shadow-lg [filter:drop-shadow(0_0_10px_rgba(34,197,94,0.6))]">
+            5x de R$5,18
           </p>
+          <p className="text-sm text-muted-foreground">(ou R$25,90 à vista!)</p>
           
           <Button size="lg" className="mt-8 w-full max-w-md font-bold text-lg bg-red-600 hover:bg-red-700 text-white shadow-lg transform hover:scale-105 transition-transform duration-300">
             SIM! QUERO FAZER O UPGRADE!
