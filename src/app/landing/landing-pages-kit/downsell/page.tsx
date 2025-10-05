@@ -3,7 +3,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Check } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Footer } from '../components/Footer';
 
 const downsellFeatures = [
@@ -53,7 +52,7 @@ export default function DownsellPage() {
           <p className="text-lg font-semibold text-primary-foreground">Oferta Premium com preço exclusivo somente nessa página por apenas:</p>
           <p className="text-lg text-muted-foreground mt-4">de <span className="line-through">R$197</span> por apenas</p>
           <p className="text-7xl font-bold my-2 text-green-500 drop-shadow-lg [filter:drop-shadow(0_0_10px_rgba(34,197,94,0.6))]">
-            R$10,00!
+            R$25,90
           </p>
           
           <Button size="lg" className="mt-8 w-full max-w-md font-bold text-lg bg-red-600 hover:bg-red-700 text-white shadow-lg transform hover:scale-105 transition-transform duration-300">

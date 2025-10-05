@@ -53,7 +53,7 @@ export function Pricing() {
                                 </ul>
                                 <div className="text-center my-6">
                                     <p className="line-through text-muted-foreground">de R$97</p>
-                                    <p className="text-5xl font-bold text-accent drop-shadow-lg [filter:drop-shadow(0_0_5px_hsl(var(--accent)/0.5))] transition-all duration-300">por apenas R$5,90</p>
+                                    <p className="text-5xl font-bold text-accent drop-shadow-lg [filter:drop-shadow(0_0_5px_hsl(var(--accent)/0.5))] transition-all duration-300">por apenas R$9,90</p>
                                 </div>
                             </CardContent>
                         </div>
@@ -105,9 +105,7 @@ export function Pricing() {
                                     </ul>
                                     <div className="text-center my-6">
                                         <p className="line-through text-muted-foreground">de R$1007,00</p>
-                                        <p className="text-lg">por apenas 5x de</p>
-                                        <p className="text-6xl font-bold text-white drop-shadow-lg [filter:drop-shadow(0_0_8px_rgba(255,255,255,0.4))] transition-all duration-300">R$5,82</p>
-                                        <p className="text-lg font-medium">(ou R$25,90 à vista!)</p>
+                                        <p className="text-6xl font-bold text-white drop-shadow-lg [filter:drop-shadow(0_0_8px_rgba(255,255,255,0.4))] transition-all duration-300">R$45,90</p>
                                     </div>
                                 </CardContent>
                             </div>
