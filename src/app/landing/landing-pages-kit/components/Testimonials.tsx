@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { BlurFade } from './BlurFade';
 
 const testimonialImages = [
@@ -38,28 +39,39 @@ export function Testimonials() {
         className="w-full"
       >
         <div className="relative">
-             <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-background to-transparent z-10"></div>
-             <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-background to-transparent z-10"></div>
-            <Dialog>
-                <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
-                    {[...testimonialImages, ...testimonialImages].map((image, index) => (
-                    <div key={index} className="flex-shrink-0 w-64 md:w-80 mx-4">
-                        <DialogTrigger asChild onClick={() => setSelectedImage(image.imageUrl)}>
-                            <Card className="overflow-hidden shadow-lg cursor-pointer rounded-lg">
-                                <CardContent className="flex aspect-[9/16] items-center justify-center p-0">
-                                    <Image
-                                    src={image.imageUrl}
-                                    alt={image.description}
-                                    width={360}
-                                    height={640}
-                                    className="w-full h-full object-cover"
-                                    />
-                                </CardContent>
-                            </Card>
-                        </DialogTrigger>
-                    </div>
-                    ))}
-                </div>
+             <Dialog>
+                <Carousel
+                    opts={{
+                        align: "start",
+                        loop: true,
+                    }}
+                    className="w-full max-w-5xl mx-auto"
+                    >
+                    <CarouselContent className="-ml-4">
+                        {testimonialImages.map((image, index) => (
+                        <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                            <div className="flex-shrink-0 w-full">
+                                <DialogTrigger asChild onClick={() => setSelectedImage(image.imageUrl)}>
+                                    <Card className="overflow-hidden shadow-lg cursor-pointer rounded-lg">
+                                        <CardContent className="flex aspect-[9/16] items-center justify-center p-0">
+                                            <Image
+                                            src={image.imageUrl}
+                                            alt={image.description}
+                                            width={360}
+                                            height={640}
+                                            className="w-full h-full object-cover"
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                </DialogTrigger>
+                            </div>
+                        </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="hidden md:flex" />
+                    <CarouselNext className="hidden md:flex" />
+                </Carousel>
+
                 {selectedImage && (
                     <DialogContent className="max-w-none w-auto h-auto bg-transparent border-none p-0">
                         <Image
