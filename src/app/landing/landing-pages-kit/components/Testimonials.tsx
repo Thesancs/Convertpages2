@@ -6,7 +6,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { BlurFade } from './BlurFade';
-import { cn } from '@/lib/utils';
 
 const testimonialImages = [
   { imageUrl: '/Depoiments/dp 2.webp', description: 'Depoimento 1' },
@@ -43,7 +42,6 @@ export function Testimonials() {
                 <Carousel
                     opts={{
                         align: "start",
-                        loop: true,
                     }}
                     className="w-full max-w-6xl mx-auto"
                     >
