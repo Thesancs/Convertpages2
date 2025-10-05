@@ -47,29 +47,31 @@ export function Testimonials() {
                     }}
                     className="w-full max-w-6xl mx-auto"
                     >
-                    <CarouselContent className="-ml-4">
-                        {testimonialImages.map((image, index) => (
-                        <CarouselItem key={index} className="pl-4 basis-1/3 md:basis-1/4 lg:basis-1/5">
-                            <div className="flex-shrink-0 w-full">
-                                <DialogTrigger asChild onClick={() => setSelectedImage(image.imageUrl)}>
-                                    <Card className="overflow-hidden shadow-lg cursor-pointer rounded-lg">
-                                        <CardContent className="flex aspect-[9/16] items-center justify-center p-0">
-                                            <Image
-                                            src={image.imageUrl}
-                                            alt={image.description}
-                                            width={360}
-                                            height={640}
-                                            className="w-full h-full object-contain"
-                                            />
-                                        </CardContent>
-                                    </Card>
-                                </DialogTrigger>
-                            </div>
-                        </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                    <CarouselPrevious className="flex -left-4" />
-                    <CarouselNext className="flex -right-4" />
+                    <div className="flex justify-center items-center gap-2">
+                      <CarouselPrevious />
+                      <CarouselContent className="-ml-4">
+                          {testimonialImages.map((image, index) => (
+                          <CarouselItem key={index} className="pl-4 basis-1/3 md:basis-1/4 lg:basis-1/5">
+                              <div className="flex-shrink-0 w-full">
+                                  <DialogTrigger asChild onClick={() => setSelectedImage(image.imageUrl)}>
+                                      <Card className="overflow-hidden shadow-lg cursor-pointer rounded-lg">
+                                          <CardContent className="flex aspect-[9/16] items-center justify-center p-0">
+                                              <Image
+                                              src={image.imageUrl}
+                                              alt={image.description}
+                                              width={360}
+                                              height={640}
+                                              className="w-full h-full object-contain"
+                                              />
+                                          </CardContent>
+                                      </Card>
+                                  </DialogTrigger>
+                              </div>
+                          </CarouselItem>
+                          ))}
+                      </CarouselContent>
+                      <CarouselNext />
+                    </div>
                 </Carousel>
 
                 {selectedImage && (
