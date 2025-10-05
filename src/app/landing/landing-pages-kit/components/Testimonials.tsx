@@ -45,11 +45,11 @@ export function Testimonials() {
                         align: "start",
                         loop: true,
                     }}
-                    className="w-full max-w-5xl mx-auto"
+                    className="w-full max-w-6xl mx-auto"
                     >
                     <CarouselContent className="-ml-4">
                         {testimonialImages.map((image, index) => (
-                        <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                        <CarouselItem key={index} className="pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
                             <div className="flex-shrink-0 w-full">
                                 <DialogTrigger asChild onClick={() => setSelectedImage(image.imageUrl)}>
                                     <Card className="overflow-hidden shadow-lg cursor-pointer rounded-lg">
